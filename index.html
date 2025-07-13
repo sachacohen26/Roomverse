@@ -2,32 +2,60 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Roomverse - Aménage ta chambre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roomverse</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>🛋️ Roomverse</h1>
-    <button id="reset">🔄 Réinitialiser</button>
+    <h1>Roomverse</h1>
+    <nav>
+      <button onclick="show2D()">2D</button>
+      <button onclick="show3D()">3D</button>
+      <button onclick="viderPlan()">Vider</button>
+      <button onclick="toggleCatalogue()">Catalogue IKEA</button>
+    </nav>
   </header>
 
   <main>
-    <div id="sidebar">
-      <h2>Meubles</h2>
-      <img src="https://i.imgur.com/SQyqx6J.png" alt="Lit" class="furniture" draggable="true">
-      <img src="https://i.imgur.com/GI6YgEb.png" alt="Bureau" class="furniture" draggable="true">
-      <img src="https://i.imgur.com/9E73PhG.png" alt="Plante" class="furniture" draggable="true">
-      <img src="https://i.imgur.com/yk5PzN6.png" alt="Lampe" class="furniture" draggable="true">
-    </div>
+    <section id="plan">
+      <p>Plan interactif ici (2D/3D)</p>
+    </section>
 
-    <div id="room">
-      <p class="placeholder">Glisse un meuble ici 🧩</p>
-    </div>
+    <section id="catalogue" class="hidden">
+      <h2>Catalogue de meubles</h2>
+      <div class="meuble">
+        <img src="https://www.ikea.com/fr/fr/images/products/klippan-canape-2-places__0711234_pe728964_s5.jpg" alt="Canapé KLIPPAN" />
+        <p>Canapé KLIPPAN - IKEA</p>
+        <button onclick="ajouterMeuble('Canapé KLIPPAN')">Ajouter</button>
+      </div>
+      <div class="meuble">
+        <img src="https://www.ikea.com/fr/fr/images/products/malm-lit-structure-avec-rangement__0737165_pe740965_s5.jpg" alt="Lit MALM" />
+        <p>Lit MALM - IKEA</p>
+        <button onclick="ajouterMeuble('Lit MALM')">Ajouter</button>
+      </div>
+      <div class="meuble">
+        <img src="https://cdn.maisonsdumonde.com/images/produits/desk.jpg" alt="Bureau industriel" />
+        <p>Bureau Industriel - Maisons du Monde</p>
+        <button onclick="ajouterMeuble('Bureau Industriel')">Ajouter</button>
+      </div>
+      <div class="meuble">
+        <img src="https://cdn.maisonsdumonde.com/images/produits/etagere.jpg" alt="Étagère en bois" />
+        <p>Étagère Bois - Maisons du Monde</p>
+        <button onclick="ajouterMeuble('Étagère Bois')">Ajouter</button>
+      </div>
+      <div class="meuble">
+        <img src="https://www.ikea.com/fr/fr/images/products/adde-chaise__0711237_pe728965_s5.jpg" alt="Chaise ADDE" />
+        <p>Chaise ADDE - IKEA</p>
+        <button onclick="ajouterMeuble('Chaise ADDE')">Ajouter</button>
+      </div>
+      <div class="meuble">
+        <img src="https://cdn.maisonsdumonde.com/images/produits/lampe.jpg" alt="Lampe vintage" />
+        <p>Lampe Vintage - Maisons du Monde</p>
+        <button onclick="ajouterMeuble('Lampe Vintage')">Ajouter</button>
+      </div>
+    </section>
   </main>
-
-  <footer>
-    <p>&copy; 2025 Roomverse - Crée ton espace</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>

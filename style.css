@@ -1,76 +1,70 @@
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  background: #f2f2f2;
-  color: #333;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
 }
 
 header {
-  background: #3b3b98;
+  background-color: #007bff;
   color: white;
-  padding: 1rem;
+  padding: 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-h1 {
+header h1 {
   margin: 0;
+  font-size: 1.5em;
 }
 
-#reset {
-  padding: 0.5rem 1rem;
-  font-weight: bold;
+nav button {
+  margin-left: 0.5em;
+  padding: 0.5em 1em;
+  background-color: white;
   border: none;
-  background: #f1c40f;
-  cursor: pointer;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background-color: #e0e0e0;
 }
 
 main {
+  padding: 2em;
+}
+
+#plan {
+  background-color: white;
+  border: 2px dashed #ccc;
+  padding: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+#catalogue {
   display: flex;
-  padding: 1rem;
+  flex-wrap: wrap;
+  gap: 1em;
 }
 
-#sidebar {
+.meuble {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 1em;
   width: 200px;
-  background: white;
-  border: 1px solid #ccc;
-  padding: 1rem;
-  margin-right: 1rem;
-  height: 500px;
-  overflow-y: auto;
-}
-
-#sidebar h2 {
   text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.furniture {
-  width: 100px;
-  margin: 10px 0;
-  cursor: grab;
+.meuble img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
 }
 
-#room {
-  flex: 1;
-  border: 2px dashed #bbb;
-  background: white;
-  position: relative;
-  height: 500px;
-  overflow: hidden;
-}
-
-.placeholder {
-  text-align: center;
-  margin-top: 200px;
-  color: #aaa;
-  font-style: italic;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #eee;
-  font-size: 0.9rem;
+.hidden {
+  display: none;
 }
